@@ -27,22 +27,9 @@ This Python script is a simple and functional **Secure Password Generator**. It 
 1. **Input Validation**:
    - Currently, there is no validation for the user input. If the user enters a non-integer value or a negative number, the script will throw an error.
    - **Solution**: Add input validation to ensure the user enters a positive integer.
-     ```python
-     try:
-         length = int(input("Enter the desired password length: "))
-         if length <= 0:
-             raise ValueError("Password length must be greater than zero.")
-     except ValueError as e:
-         print(f"Invalid input: {e}")
-         exit()
-     ```
 
 2. **Password Strength Feedback**:
    - While the generated passwords are secure due to the use of `secrets`, adding feedback on password strength (e.g., minimum recommended length) would enhance usability.
-     ```python
-     if length < 8:
-         print("Warning: It is recommended to use passwords with at least 8 characters for better security.")
-     ```
 
 3. **Exclusion of Ambiguous Characters (Optional)**:
    - Some users may want to exclude ambiguous characters (e.g., `O`, `0`, `l`, `1`) from their passwords for readability.
